@@ -28,7 +28,7 @@ class DatePicker extends React.Component {
     this.daysAfterSelectedDate = Math.round(daysStartDate);
     this.initDayInex = this.props.startDate ? Math.round(days) - Math.round(daysStartDate) : Math.round(days);
     this.initHourInex = this.props.format24 ? time24format : time12format[0] - 1;
-    this.initMinuteInex = Math.round(this.selectedDate.getMinutes() / 5);
+    this.initMinuteInex = Math.round(this.selectedDate.getMinutes());
     this.initAmInex = time12format[1] === 'AM' ? 0 : 1;
   }
 

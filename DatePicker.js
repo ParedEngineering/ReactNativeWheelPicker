@@ -41,6 +41,7 @@ class DatePicker extends React.Component {
           isCurved
           visibleItemCount={8}
           data={this.props.days ? this.props.days : PickerDateArray(this.props.startDate, this.props.daysCount)}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onDaySelected(data)}
           selectedItemPosition={this.initDayInex}
@@ -52,6 +53,7 @@ class DatePicker extends React.Component {
           isCurved
           visibleItemCount={8}
           data={this.props.hours ? this.props.hours : getHoursArray()}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onHourSelected(data)}
           selectedItemPosition={this.initHourInex}
@@ -63,6 +65,7 @@ class DatePicker extends React.Component {
           isCurved
           visibleItemCount={8}
           data={this.props.minutes ? this.props.minutes : getFiveMinutesArray()}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onMinuteSelected(data)}
           selectedItemPosition={this.initMinuteInex}
@@ -81,6 +84,7 @@ class DatePicker extends React.Component {
           isCurved
           visibleItemCount={8}
           data={getAmArray()}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onAmSelected(data)}
           selectedItemPosition={this.initAmInex}

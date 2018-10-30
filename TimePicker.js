@@ -46,6 +46,7 @@ class TimePicker extends React.Component {
           isCurved
           visibleItemCount={6}
           data={this.hours}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onHourSelected(data)}
           selectedItemPosition={this.initHourInex}
@@ -57,6 +58,7 @@ class TimePicker extends React.Component {
           isCurved
           visibleItemCount={6}
           data={this.minutes}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onMinuteSelected(data)}
           selectedItemPosition={this.initMinuteInex}
@@ -67,6 +69,7 @@ class TimePicker extends React.Component {
           isCurved
           visibleItemCount={6}
           data={getAmArray()}
+          itemTextColor={'grey'}
           selectedItemTextColor={'black'}
           onItemSelected={data => this.onAmSelected(data)}
           selectedItemPosition={this.initAmInex}

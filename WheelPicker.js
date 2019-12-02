@@ -21,12 +21,15 @@ class WheelPicker extends React.Component {
   }
 
   componentDidMount() {
-     this.setState({ selectedItemPosition: this.props.selectedItemPosition })
-   }
+    this.setState({ selectedItemPosition: this.props.selectedItemPosition })
+  }
 
-   componentWillReceiveProps(nextProps){
-     this.setState({ selectedItemPosition: nextProps.selectedItemPosition })
-   }
+  componentDidUpdate(prevProps) {
+    const { selectedItemPosition } = this.props
+    if (selectedItemPosition !== prevProps.selectedItemPosition) {
+      this.setState({ selectedItemPosition })
+    }
+  }
 
   render() {
      return (
